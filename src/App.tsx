@@ -18,7 +18,7 @@ function App() {
             Die Beisetzung findet am 11.09.2025 um 13:00 Uhr im Friedwald Bernau statt. Wir treffen uns ca. 30min vorher auf dem Parkplatz. Denkt an feste Schuhe und kleidet euch in euren Lieblingsfarben. Im Friedwald ist Grabschmuck nicht erlaubt. Es können kleine Zettel mit liebevollen Gedanken mit ins Grab gegeben werden. Nach dem Abschied laden wir zum Beisammensein ein.
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Bitte gib uns über das folgende Formular eine Rückmeldung.
+            Bitte gib uns bis zum 17.08.2025 über das folgende Formular eine Rückmeldung.
           </Typography>
         </CardContent>
       </Card>

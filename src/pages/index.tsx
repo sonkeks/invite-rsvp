@@ -72,6 +72,17 @@ export const Home: FunctionComponent = () => {
   
   return (
     <div>
+      <Collapse sx={{marginTop: "15px"}} in={!!alert}>
+        {alert && (
+          <Alert
+            severity={alert.type}
+            onClose={() => setAlert(null)}
+            sx={{ mb: 2 }}
+          >
+            {alert.message}
+          </Alert>
+        )}
+      </Collapse>
     <Box component="form" onSubmit={handleSubmit} sx={{ display: "flex", flexDirection: "column", gap: 2, width: "100%" }}>
       <TextField
         label="Vorname"
@@ -113,17 +124,6 @@ export const Home: FunctionComponent = () => {
         </Button>
       </Stack>
     </Box>
-    <Collapse sx={{marginTop: "15px"}} in={!!alert}>
-      {alert && (
-        <Alert
-          severity={alert.type}
-          onClose={() => setAlert(null)}
-          sx={{ mb: 2 }}
-        >
-          {alert.message}
-        </Alert>
-      )}
-    </Collapse>
     </div>
   )
 }
