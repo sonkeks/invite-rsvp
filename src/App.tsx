@@ -1,19 +1,12 @@
 import './App.css'
 import {Outlet} from "react-router";
-import {Box, Card, CardMedia, CardContent, Typography} from "@mui/material";
-import Tree from "./assets/tree.jpeg";
+import {Box, Card, CardContent, Typography} from "@mui/material";
 
 function App() {
 
   return (
     <Box className="page">
       <Card sx={{ maxWidth: 500, marginBottom: "15px" }}>
-        <CardMedia
-          component="img"
-          alt="green iguana"
-          height="300"
-          image={Tree}
-        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Beisetzung von Maik
