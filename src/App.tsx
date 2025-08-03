@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {Outlet} from "react-router";
+import {Box, Card, CardMedia, CardContent, Typography} from "@mui/material";
+import Tree from "./assets/tree.jpeg";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Box className="page">
+      <Card sx={{ maxWidth: 500, marginBottom: "15px" }}>
+        <CardMedia
+          component="img"
+          alt="green iguana"
+          height="300"
+          image={Tree}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Beisetzung von Maik
+          </Typography>
+          <Typography variant="body2" sx={{ marginBottom: "15px", color: 'text.secondary' }}>
+            Gemeinsam wollen wir an Maik denken und uns von ihm verabschieden.
+          </Typography>
+          <Typography variant="body2" sx={{ marginBottom: "15px", color: 'text.secondary' }}>
+            Die Beisetzung findet am 11.09.2025 um 13:00 Uhr im Friedwald Bernau statt. Wir treffen uns ca. 30min vorher auf dem Parkplatz. Denkt an feste Schuhe und kleidet euch in euren Lieblingsfarben. Im Friedwald ist Grabschmuck nicht erlaubt. Es können kleine Zettel mit liebevollen Gedanken mit ins Grab gegeben werden. Nach dem Abschied laden wir zum Beisammensein ein.
+          </Typography>
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            Bitte gib uns über das folgende Formular eine Rückmeldung.
+          </Typography>
+        </CardContent>
+      </Card>
+      <Outlet />
+    </Box>
   )
 }
 
