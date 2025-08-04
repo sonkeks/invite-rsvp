@@ -2,8 +2,7 @@
   font-family: Roboto, serif;
   max-width: 500px;
   margin: 0 auto;
-  padding-top: 25px;
-  padding-bottom: 50px;
+  padding: 10px 10px 25px 10px;
 }
 
 .header {
